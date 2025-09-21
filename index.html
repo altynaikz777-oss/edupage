@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .lefti {
+        width: 30px;
+        height: 30px;
+      }
+      .lefts {
+        display: flex;
+        flex-direction: row;
+        /*justify-content: center;*/
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        font-family: sans-serif;
+      }
+      .left {
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+        width: 150px;
+        background-color: rgba(246, 247, 249);
+        border-right: 1px solid gray;
+        margin-top: 50px;
+        cursor: pointer;
+      }
+      .lefts:hover {
+        opacity: 1;
+        color: rgb(227, 222, 222, 1);
+      }
+      .lefto {
+        display: flex;
+        flex-direction: row;
+        /*justify-content: center;*/
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        font-family: sans-serif;
+        background-color: rgba(95, 125, 139);
+        width: 150px;
+        height: 25px;
+        color: white;
+      }
+      .top {
+        background-color: rgba(44, 113, 163);
+        width: 1500px;
+        height: 50px;
+        margin-left: -7px;
+        position: relative;
+      }
+      .menu {
+        display: flex;
+        flex-direction: row;
+        margin-top: -850px;
+        align-items: center;
+        color: white;
+      }
+      .menu img {
+        width: 40px;
+        height: 50px;
+        margin-top: -4px;
+      }
+      .topr img {
+        display: flex;
+        flex-direction: row;
+        /*width: 90px;
+        height: 50px;*/
+        gap: 10px;
+      }
+      .topr {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: -5px;
+        right: 70px;
+        gap: 10px;
+      }
+      .help {
+        width: 90px;
+        height: 50px;
+      }
+      .messageblue {
+        width: 70px;
+        height: 50px;
+        top: -50px;
+      }
+      .emailblue {
+        width: 70px;
+        height: 50px;
+      }
+      .me {
+        width: 170px;
+        height: 57px;
+        margin-bottom: -5px;
+      }
+      .top1 {
+        width: 1340px;
+        height: 50px;
+        margin-left: 150px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        position: relative;
+      }
+      .class1 {
+        background-color: rgba(162, 216, 239, 0.5);
+        width: 150px;
+        height: 30px;
+        font-size: 13px;
+        font-family: sans-serif;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .class2 span {
+        width: 80px;
+        height: 30px;
+        font-size: 13px;
+        font-family: sans-serif;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        cursor: pointer;
+      }
+      .class2 span:hover {
+        opacity: 1;
+        background-color: rgba(162, 216, 239, 0.5);
+      }
+      .topr2 img {
+        height: 30px;
+        width: 40px;
+      }
+      .topr2 {
+        width: 80px;
+        height: 30px;
+        font-size: 13px;
+        font-family: sans-serif;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 100px;
+      }
+      .topr2 :hover {
+        opacity: 1;
+        background-color: rgba(162, 216, 239, 0.5);
+      }
+      .f1 {
+        width: 1200px;
+        height: 60px;
+        background-color: white;
+        margin-left: 150px;
+      }
+      .f1 span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        font-family: sans-serif;
+      }
+      .week {
+        display: flex;
+        flex-direction: column;
+        margin-left: 170px;
+        gap: 90px;
+        margin-top: 50px;
+      }
+      .monday,
+      .tuesday,
+      .wednesday,
+      .thursday,
+      .friday {
+        display: flex;
+        flex-direction: column;
+        font-family: sans-serif;
+        font-size: 18px;
+        justify-content: center;
+      }
+      .number {
+        font-size: 10px;
+      }
+      .time {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        margin-left: 280px;
+        margin-top: -570px;
+        align-items: center;
+        justify-content: center;
+      }
+      .number1 {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+      }
+      .timet {
+        font-size: 10px;
+        margin-left: -15px;
+        width: 50px;
+      }
+      .rasp {
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+        background-color: white;
+        width: 1320px;
+        height: 800px;
+        margin-left: 230px;
+        margin-top: 10px;
+        gap: 5px;
+      }
+      .box1 {
+        display: grid;
+        grid-column: 1/5;
+        grid-row: 1/3;
+        background-color: violet;
+        border-radius: 5px;
+        position: relative;
+      }
+      .box2 {
+        display: grid;
+        grid-column: 5/10;
+        grid-row: 1/5;
+        background-color: pink;
+        border-radius: 5px;
+        position: relative;
+      }
+      .box3 {
+        display: grid;
+        grid-column: 10/14;
+        grid-row: 1/3;
+        background-color: rgb(248, 165, 11, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box4 {
+        display: grid;
+        grid-column: 14/16;
+        grid-row: 1/3;
+        background-color: white;
+        border-radius: 5px;
+      }
+      .box5 {
+        display: grid;
+        grid-column: 16/18;
+        grid-row: 1/3;
+        background-color: rgb(40, 217, 240, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box6 {
+        display: grid;
+        grid-column: 18/20;
+        grid-row: 1/3;
+        background-color: white;
+      }
+      .box7 {
+        display: grid;
+        grid-column: 20/22;
+        grid-row: 1/13;
+        background-color: white;
+      }
+      .box8 {
+        display: grid;
+        grid-column: 22/24;
+        grid-row: 1/13;
+        background-color: white;
+      }
+      .box9 {
+        display: grid;
+        grid-column: 1/5;
+        grid-row: 3/7;
+        background-color: rgb(235, 159, 18, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box10 {
+        display: grid;
+        grid-column: 5/10;
+        grid-row: 5/7;
+        background-color: rgba(211, 26, 211, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box11 {
+        display: grid;
+        grid-column: 10/14;
+        grid-row: 3/7;
+        background-color: rgb(124, 242, 255, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box12 {
+        display: grid;
+        grid-column: 14/16;
+        grid-row: 3/5;
+        background-color: white;
+      }
+      .box13 {
+        display: grid;
+        grid-column: 14/16;
+        grid-row: 5/7;
+        background-color: white;
+      }
+      .box14 {
+        display: grid;
+        grid-column: 16/20;
+        grid-row: 3/13;
+        background-color: rgb(40, 217, 240, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box15 {
+        display: grid;
+        grid-column: 1/5;
+        grid-row: 7/13;
+        background-color: violet;
+        border-radius: 5px;
+        position: relative;
+      }
+      .box16 {
+        display: grid;
+        grid-column: 5/12;
+        grid-row: 7/10;
+        background-color: rgb(40, 217, 240, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box17 {
+        display: grid;
+        grid-column: 12/14;
+        grid-row: 7/10;
+        background-color: rgb(36, 102, 255, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box18 {
+        display: grid;
+        grid-column: 14/16;
+        grid-row: 7/13;
+        background-color: white;
+      }
+      .box19 {
+        display: grid;
+        grid-column: 5/10;
+        grid-row: 10/13;
+        background-color: rgb(112, 111, 111, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .box20 {
+        display: grid;
+        grid-column: 10/14;
+        grid-row: 10/13;
+        background-color: rgb(40, 217, 240, 0.5);
+        border-radius: 5px;
+        position: relative;
+      }
+      .teachers {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 13px;
+      }
+      .subject {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <div class="lefts">
+        <img src="image/star.png" class="lefti" /> <span>Введение</span>
+      </div>
+      <div class="lefts">
+        <img src="image/message.png" class="lefti" />
+        <span>Уведомление</span>
+      </div>
+      <div class="lefts">
+        <img src="image/home.png" alt="" class="lefti" />
+        <span>Веб-страница</span>
+      </div>
+      <div class="lefts">
+        <img src="image/book.png" alt="" class="lefti" />
+        <span>Классный жур...</span>
+      </div>
+      <div class="lefts">
+        <img src="image/mark.png" alt="" class="lefti" />
+        <span>Оценки</span>
+      </div>
+      <div class="lefts">
+        <img src="image/work.png" alt="" class="lefti" />
+        <span>Учебный план</span>
+      </div>
+      <div class="lefts">
+        <img src="image/label.png" alt="" class="lefti" />
+        <span>Результаты</span>
+      </div>
+      <div class="lefto">
+        <img src="image/education.png" alt="" class="lefti" />
+        <span>Обучение</span>
+      </div>
+      <div class="lefts">
+        <img src="image/email.png" alt="" class="lefti" />
+        <span>Связь</span>
+      </div>
+    </div>
+    <div class="top">
+      <div class="menu">
+        <img src="image/coloredbook.png" alt="" />
+        <span>Начало</span>
+      </div>
+      <div class="topr">
+        <img src="image/messageblue.png" alt="" class="messageblue" />
+        <img src="image/emailblue.png" alt="" class="emailblue" /><img
+          src="image/help.png"
+          alt=""
+          class="help"
+        />
+        <img src="image/me.png" alt="" class="me" />
+      </div>
+    </div>
+    <div class="top1">
+      <div class="classes">
+        <strong class="class1">МОЕ РАСПИСАНИЕ</strong>
+      </div>
+      <div class="class2"><span>КЛАССЫ</span></div>
+      <div class="topr2">
+        <img src="image/left.png" alt="" /><span>СЕГОДНЯ</span
+        ><img src="image/right.png" alt="" />
+        <img src="image/down.png" alt="" />
+      </div>
+    </div>
+    <div class="f1">
+      <span> 2F-1 - АД </span>
+    </div>
+    <div class="week">
+      <div class="monday">
+        <span>Пн</span>
+        <span class="number">15/09</span>
+      </div>
+      <div class="tuesday">
+        <span>Вт</span>
+        <span class="number">16/09</span>
+      </div>
+      <div class="wednesday">
+        <span>Ср</span>
+        <span class="number">17/09</span>
+      </div>
+      <div class="thursday">
+        <span>Чт</span>
+        <span class="number">18/09</span>
+      </div>
+      <div class="friday">
+        <span>Пт</span>
+        <span class="number">19/09</span>
+      </div>
+    </div>
+    <div class="time">
+      <div class="number1">
+        <span>1</span>
+        <span class="timet">8:30-9:15</span>
+      </div>
+      <div class="number1">
+        <span>2</span>
+        <span class="timet">9:20-10:05</span>
+      </div>
+      <div class="number1">
+        <span>3</span>
+        <span class="timet">10:15-11:00</span>
+      </div>
+      <div class="number1">
+        <span>4</span>
+        <span class="timet">11:05-11:50</span>
+      </div>
+      <div class="number1">
+        <span>5</span>
+        <span class="timet">11:55-12:40</span>
+      </div>
+      <div class="number1">
+        <span>5</span>
+        <span class="timet">12:45-13:30</span>
+      </div>
+      <div class="number1">
+        <span>6</span>
+        <span class="timet">13:35-14:20</span>
+      </div>
+      <div class="number1">
+        <span>7</span>
+        <span class="timet">14:25-15:10</span>
+      </div>
+      <div class="number1">
+        <span>8</span>
+        <span class="timet">15:20-16:05</span>
+      </div>
+      <div class="number1">
+        <span>9</span>
+        <span class="timet">16:10-16:55</span>
+      </div>
+      <div class="number1">
+        <span>10</span>
+        <span class="timet">17:00-17:45</span>
+      </div>
+    </div>
+    <div class="rasp">
+      <div class="box1">
+        <span class="subject">КМ2. ОН 2.1-2.3.Math</span>
+        <span class="teachers">Нұртілеу Шабден</span>
+      </div>
+      <div class="box2">
+        <span class="subject"
+          >ЖММ". Дене қасиеттерін дамыту және жетілдіру</span
+        >
+        <span class="teachers">Тилентаев Канат</span>
+      </div>
+      <div class="box3">
+        <span class="subject">КМ1 OH1.1-1.3.Кат</span>
+        <span class="teachers">Данагуль Саулебекова</span>
+      </div>
+      <div class="box4"></div>
+      <div class="box5">
+        <span class="subject">КМ3.ОН 3.1-3.3 Web-бағдарламалау </span>
+        <span class="teachers"> Тәжібаева Жансая</span>
+      </div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+      <div class="box8"></div>
+      <div class="box9">
+        <span class="subject">КМ1 OH1.1-1.3.Кат</span>
+        <span class="teachers">Данагуль Саулебекова</span>
+      </div>
+      <div class="box10">
+        <span class="subject">КМ2. ОН 2.1-2.3.Math</span>
+        <span class="teachers">Нұртілеу Шабден</span>
+      </div>
+      <div class="box11">
+        <span class="subject">КМ3.ОН 3.1-3.3 Web-бағдарламалау </span>
+        <span class="teachers"> Тәжібаева Жансая</span>
+      </div>
+      <div class="box12"></div>
+      <div class="box13"></div>
+      <div class="box14">
+        <span class="subject">КМ3.ОН 3.1-3.3 Web-бағдарламалау </span>
+        <span class="teachers"> Тәжібаева Жансая</span>
+      </div>
+      <div class="box15">
+        <span class="subject">КМ2. ОН 2.1-2.3.Math</span>
+        <span class="teachers">Нұртілеу Шабден</span>
+      </div>
+      <div class="box16">
+        <span class="subject">КМ3.ОН 3.1-3.3 Web-бағдарламалау </span>
+        <span class="teachers"> Тәжібаева Жансая</span>
+      </div>
+      <div class="box17">
+        <span class="subject">Тс</span>
+        <span class="teachers">Құттықожа Мунира </span>
+      </div>
+      <div class="box18"></div>
+      <div class="box19">
+        <span class="subject">
+          КМ 1.ОН 1.4. Іскерлік мақсатта екінші шетел тілін қолдану</span
+        >
+        <span class="teachers">Аккая Эмре</span>
+      </div>
+      <div class="box20">
+        <span class="subject">КМ3.ОН 3.1-3.3 Web-бағдарламалау </span>
+        <span class="teachers"> Тәжібаева Жансая</span>
+      </div>
+    </div>
+  </body>
+</html>
